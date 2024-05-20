@@ -1,5 +1,11 @@
 # 2024-05-04 Information Retrieval - Boolean Retrieval
 
+|                         |                     |
+|-------------------------|---------------------|
+| **Submitter**           | Yusuf Syaifudin     |
+| **Student ID Number**   | 23/525770/PPA/06617 |
+| **Date of submit**      | 20 May 2024         |
+
 ## Code
 
 All code in this report can be obtained through public repository: [https://github.com/yusufsyaifudin/20240504-boolean-retrieval](https://github.com/yusufsyaifudin/20240504-boolean-retrieval)
@@ -359,5 +365,10 @@ Total time taken         : 1.923374 seconds
 
 ### Are the retrieved documents relevant to the queries?
 
+Since the query used in this trial is pretty simple, I can conclude:
 
+* Using logical operator `AND`, both queries (`["pemerintah", "korupsi"]` and `["jalan", "rusak"]`) return good relevance of documents (using all index file). This is because the stemming index is consistently applied during indexing and retrieval process. Also, since `AND` query means that all `token` or `word` must exist in the same document, it is easily for inverted index to match the desired documents.
 
+* `OR` queries return somewhat less relevant document. My guess is because it simply push any document with minimum one matches of `token` or `word` to the results array. Then it only sort the documents based on the `word` occurences.
+
+* `NOT` query is clear and predictable to have most less relevant result. Actually we cannot say it is irrelevant, because the nature of the query is "we want a document that NOT contain all of the words in the array". So, since the returned document already return the documents that not contain any single word or token from the query list, then we can say that it is work well and can return results as expected.
