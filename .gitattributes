@@ -2,3 +2,4 @@ word_map_not_stemmed_all_word.json filter=lfs diff=lfs merge=lfs -text
 document_content_map.json filter=lfs diff=lfs merge=lfs -text
 word_map_stemmed_all_word.json filter=lfs diff=lfs merge=lfs -text
 word_map_stemmed_not_stopword.json filter=lfs diff=lfs merge=lfs -text
+news.csv filter=lfs diff=lfs merge=lfs -text
